@@ -1,0 +1,41 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "CBT模擬試験センター",
+      "hasCanvas": false,
+      "bodyTextLen": 926,
+      "bodyTextHash": "acc30ee80701c7d59a65575682803620a60920d42e8da6debb045136c39f1cba",
+      "bodyTextPrefix": "CBT 模擬試験センター 試験一覧 学習履歴 ログイン IPA 情報処理技術者試験 CBT模擬試験センター ITパスポート・基本",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "CBT模擬試験センター",
+      "hasCanvas": false,
+      "bodyTextLen": 916,
+      "bodyTextHash": "3b5055e74f86b1f9d2395c21543d785a1f00bb1ec228df9ab27bc4ada28e2554",
+      "bodyTextPrefix": "CBT 模擬試験センター ログイン IPA 情報処理技術者試験 CBT模擬試験センター ITパスポート・基本情報・応用情報・デー",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text replaced (similar length, page start changed)",
+    "mobile: body text replaced (similar length, page start changed)"
+  ]
+}
