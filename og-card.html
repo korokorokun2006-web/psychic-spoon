@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @font-face {
+      font-family: "Shippori Mincho";
+      src: url("fonts/ShipporiMincho-Medium.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Shippori Mincho";
+      src: url("fonts/ShipporiMincho-SemiBold.ttf") format("truetype");
+      font-weight: 600;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Shippori Mincho";
+      src: url("fonts/ShipporiMincho-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "IPA Gothic";
+      src: url("fonts/ipag.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #f3efe6;
+    }
+    body {
+      position: relative;
+      color: #1b1914;
+    }
+    .paper {
+      position: absolute;
+      inset: 0;
+      background: #f3efe6 url("paper.jpg") center / cover no-repeat;
+      mix-blend-mode: multiply;
+      opacity: 0.72;
+    }
+    .paper-tint {
+      position: absolute;
+      inset: 0;
+      background: #f3efe6;
+    }
+    .book {
+      position: absolute;
+      inset: 46px 54px;
+      background: #fffcf7;
+      border-radius: 2px;
+      box-shadow:
+        0 1px 0 rgba(27, 25, 20, 0.04),
+        0 22px 48px -22px rgba(19, 44, 82, 0.32);
+      overflow: hidden;
+    }
+    .book-grain {
+      position: absolute;
+      inset: 0;
+      background: url("paper.jpg") center / cover no-repeat;
+      opacity: 0.18;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+    .spine {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 22px;
+      background: #1c3f73;
+    }
+    .spine::after {
+      content: "";
+      position: absolute;
+      right: 5px;
+      top: 18px;
+      bottom: 18px;
+      width: 1px;
+      background: #fffcf7;
+      opacity: 0.28;
+    }
+    .outer-rule {
+      position: absolute;
+      inset: 14px 14px 14px 36px;
+      border: 2px solid #1c3f73;
+      pointer-events: none;
+    }
+    .inner-rule {
+      position: absolute;
+      inset: 20px 20px 20px 42px;
+      border: 1px solid #1c3f73;
+      opacity: 0.85;
+      pointer-events: none;
+    }
+    .lockup {
+      position: absolute;
+      inset: 0 0 0 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 72px 40px;
+    }
+    .kicker {
+      font-family: "IPA Gothic", sans-serif;
+      font-size: 17px;
+      letter-spacing: 0.38em;
+      color: #1c3f73;
+      padding-left: 0.38em;
+      line-height: 1;
+    }
+    .title {
+      font-family: "Shippori Mincho", serif;
+      font-weight: 700;
+      font-size: 58px;
+      letter-spacing: 0.06em;
+      color: #1b1914;
+      margin-top: 20px;
+      line-height: 1.2;
+      padding-left: 0.06em;
+    }
+    .rule {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 22px 0 18px;
+    }
+    .rule span {
+      display: block;
+      width: 118px;
+      height: 1px;
+      background: #1c3f73;
+    }
+    .rule i {
+      display: block;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #1c3f73;
+      transform: rotate(45deg);
+    }
+    .exams {
+      font-family: "IPA Gothic", sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.12em;
+      color: #3f3a32;
+      padding-left: 0.12em;
+    }
+    .stamp {
+      position: absolute;
+      top: 42px;
+      right: 46px;
+      width: 126px;
+      height: 126px;
+      transform: rotate(-8deg);
+      color: #1c3f73;
+    }
+  </style>
+</head>
+<body>
+  <div class="paper-tint"></div>
+  <div class="paper"></div>
+  <div class="book">
+    <div class="book-grain"></div>
+    <div class="spine"></div>
+    <div class="outer-rule"></div>
+    <div class="inner-rule"></div>
+    <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+      <defs>
+        <path id="stamp-ring" d="M60,60 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0" />
+      </defs>
+      <circle cx="60" cy="60" r="56.5" fill="none" stroke="currentColor" stroke-width="3.4" />
+      <circle cx="60" cy="60" r="47" fill="none" stroke="currentColor" stroke-width="1.35" />
+      <text
+        font-family="IPA Gothic, sans-serif"
+        font-size="8.4"
+        fill="currentColor"
+        letter-spacing="2.4"
+      >
+        <textPath href="#stamp-ring" startOffset="0%">CBT　模擬試験　CBT　模擬試験</textPath>
+      </text>
+      <text
+        x="60"
+        y="54"
+        text-anchor="middle"
+        font-family="Shippori Mincho, serif"
+        font-size="23"
+        font-weight="700"
+        fill="currentColor"
+      >模</text>
+      <text
+        x="60"
+        y="80"
+        text-anchor="middle"
+        font-family="Shippori Mincho, serif"
+        font-size="23"
+        font-weight="700"
+        fill="currentColor"
+      >試</text>
+    </svg>
+    <div class="lockup">
+      <div class="kicker">IPA 情報処理技術者試験</div>
+      <h1 class="title">CBT模擬試験センター</h1>
+      <div class="rule" aria-hidden="true"><span></span><i></i><span></span></div>
+      <div class="exams">ITパスポート　·　基本情報　·　応用情報　·　データベーススペシャリスト</div>
+    </div>
+  </div>
+</body>
+</html>
